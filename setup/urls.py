@@ -16,9 +16,12 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from cliente import views
+from cliente import views as vcliente
+from estoque import views as vestoque
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.index, name='index' ),
-    path('cadastro', views.cadastro, name='cadastro' )
+    path('', vcliente.index, name='index' ),
+    path('cadastro', vcliente.cadastro, name='cadastro' ),
+    path('listar', vcliente.listar, name='listar' ),
+    path('cadastro_produto', vestoque.listar_produto, name='cadastro_produto' )
 ]
