@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tito's Stock</title>
+    <title>Tito's Stock</title> 
     {% load bootstrap5 %}
     {% bootstrap_css %}
     {% bootstrap_javascript %}
@@ -11,12 +11,9 @@
 <body>
     <h1>Tito's Stock</h1>
     <p>Sistema de Gerenciamento de Estoque</p>
-    <a href="{% url 'index' %}">Home</a>
-    <a href="{% url 'cadastro' %}">Cadastre-se</a>
-    <a href="{% url 'listar' %}">Lista de Clientes</a>
-    <a href="{% url 'cadastro_produto' %}">Estoque</a>
-    
-    
+
+    <a href="{% url 'index_cliente' %}">Home</a>
+    <a href="{% url 'cadastro_cliente' %}">Cadastro clientes</a>
 
     {% block content %}
     {% endblock %}
